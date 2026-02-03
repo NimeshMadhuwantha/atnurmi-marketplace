@@ -26,17 +26,17 @@ const features = [
 
 const WhyAtnurmiSection: React.FC = () => {
   return (
-    <section className="py-24 bg-gray-50 dark:bg-gray-900/40 px-6 lg:px-20">
-      <div className="max-w-[1440px] mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 dark:text-white">
+    <section id="about" className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900/40 px-4 sm:px-6 lg:px-20">
+      <div className="max-w-[1440px] mx-auto text-center mb-12 md:mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4 dark:text-white">
           Why Atnurmi?
         </h2>
-        <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+        <p className="text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto px-4">
           Commitment to quality and innovation in every single project.
         </p>
       </div>
 
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {features.map((feature, index) => (
           <FeatureCard
             key={index}
