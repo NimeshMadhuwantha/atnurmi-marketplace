@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
           <a className="text-sm font-semibold hover:text-primary transition-colors dark:text-gray-300" href="#services">
             Services
           </a>
-          <a className="text-sm font-semibold hover:text-primary transition-colors dark:text-gray-300" href="#shop">
+          <a className="text-sm font-semibold hover:text-primary transition-colors dark:text-gray-300" href="/shop">
             Shop
           </a>
           <a className="text-sm font-semibold hover:text-primary transition-colors dark:text-gray-300" href="#about">
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
             </a>
             <a 
               className="block text-base font-semibold hover:text-primary transition-colors dark:text-gray-300 py-2" 
-              href="#shop"
+              href="/shop"
               onClick={toggleMobileMenu}
             >
               Shop
