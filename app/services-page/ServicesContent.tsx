@@ -13,7 +13,7 @@ const categoryImages: Record<string, string> = {
   'web-development': '/images/images/webdev-cover.webp',
 };
 
-export default function ServicesPage() {
+export default function ServicesContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState('art-and-creation');
@@ -28,7 +28,7 @@ export default function ServicesPage() {
 
   const handleCategoryClick = (categoryId: string) => {
     setActiveCategory(categoryId);
-    router.push(`/services/${categoryId}`);
+    router.push(`/services-page/${categoryId}`);
   };
 
   return (

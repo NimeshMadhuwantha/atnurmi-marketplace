@@ -11,7 +11,7 @@ export default function ServiceBackButton({ categoryId }: ServiceBackButtonProps
   const router = useRouter();
 
   const handleBackClick = () => {
-    router.push(`/services?category=${categoryId}`);
+    router.push(`/services-page?category=${categoryId}`);
   };
 
   return (
