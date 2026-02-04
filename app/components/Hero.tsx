@@ -1,12 +1,13 @@
 import React from 'react';
+import homeBackground from '@/public/images/images/homebackground.webp';
 
 const Hero: React.FC = () => {
   return (
-    <section className="px-6 lg:px-20 py-10">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="relative min-h-[600px] flex flex-col items-start justify-end p-8 md:p-16 overflow-hidden rounded-3xl bg-cover bg-center shadow-2xl"
+    <section className="py-10">
+      <div className="w-full">
+        <div className="relative min-h-[600px] flex flex-col items-start justify-end p-8 md:p-16 overflow-hidden bg-cover bg-center shadow-2xl"
           style={{
-            backgroundImage: `linear-gradient(to top, rgba(16, 28, 34, 0.9) 0%, rgba(19, 164, 236, 0.2) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuCJn7EuwYO-RD0eYGk2IyZgsGuDBzFQVVPrVG9vtOY624QLMuAnhliBQxKPgOGgXd5jTOHyCBVKtcjdDhX1AFBbenkKQQM22aHDfEiMQaMQo9_P8CopCsVQkUQtp5fTR0XvzooWr7PEqm0kK_NRqi8fGGyScwlSaQ40Lj5-xmfpDDqbbS1R1h-4pIu-_8-0dM4_K0E6do2tnF4dM_vDOzDwJdjRlyjxDockuSapL7BEne79eFecLYM6DG9StqTsMOvH0BFZuObqa6')`
+            backgroundImage: `linear-gradient(to top, rgba(16, 28, 34, 0.9) 0%, rgba(19, 164, 236, 0.2) 100%), url(${homeBackground.src})`
           }}
         >
           <div className="relative z-10 max-w-2xl">
@@ -21,10 +22,10 @@ const Hero: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-primary text-white px-8 py-4 rounded-xl text-base font-bold transition-transform hover:scale-105">
-                View Portfolio
+          View Portfolio
               </button>
               <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl text-base font-bold hover:bg-white/20 transition-all">
-                Our Services
+          Our Services
               </button>
             </div>
           </div>

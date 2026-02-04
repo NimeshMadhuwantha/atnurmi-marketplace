@@ -6,21 +6,25 @@ const services = [
     icon: 'desktop_windows',
     title: 'UI/UX Design',
     description: 'Modern, user-centric interfaces designed to provide seamless digital navigation.',
+    image: '/images/images/uiux-cover.webp',
   },
   {
     icon: 'brush',
     title: 'Pencil Arts',
     description: 'Bespoke hand-drawn illustrations and digital paintings with artistic soul.',
+    image: '/images/images/art-cover.webp',
   },
   {
     icon: 'auto_awesome',
     title: 'Graphic Design',
     description: 'Visual identities and branding that make a lasting impression on your audience.',
+    image: '/images/images/graphic-cover.webp',
   },
   {
     icon: 'code',
     title: 'Front-end Dev',
     description: 'Clean, responsive, and performance-optimized code for modern web apps.',
+    image: '/images/images/webdev-cover.webp',
   },
 ];
 
@@ -41,6 +45,7 @@ const ServicesSection: React.FC = () => {
             icon={service.icon}
             title={service.title}
             description={service.description}
+            image={service.image}
           />
         ))}
       </div>
