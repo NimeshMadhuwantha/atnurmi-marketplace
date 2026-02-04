@@ -81,13 +81,13 @@ export default function ServicesPage() {
                 onClick={() => handleCategoryClick(category.id)}
                 className="group cursor-pointer"
               >
-                <div className="relative overflow-hidden rounded-2xl aspect-[16/10] mb-6 transition-transform group-hover:scale-[1.02] shadow-lg">
+                <div className="relative overflow-hidden rounded-2xl aspect-[16/10] mb-6 transition-all duration-700 ease-out group-hover:scale-[1.02] shadow-lg group-hover:shadow-2xl">
                   {/* Background Image */}
                   <Image
                     src={categoryImages[category.id]}
                     alt={category.label}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
@@ -103,7 +103,7 @@ export default function ServicesPage() {
                     Explore {category.label.toLowerCase()} services
                   </p>
                   <svg
-                    className="w-5 h-5 text-primary group-hover:translate-x-2 transition-transform"
+                    className="w-5 h-5 text-primary"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

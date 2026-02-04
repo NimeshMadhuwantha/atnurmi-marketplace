@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import ServiceHero from '../../components/ServiceHero';
 import ServicePricingCard from '../../components/ServicePricingCard';
 import ServicePortfolioSection from '../../components/ServicePortfolioSection';
-import ServiceBackButton from '../../components/ServiceBackButton';
 import {
   servicePricing,
   servicePortfolio,
@@ -39,9 +38,6 @@ export default function UIUXDesignPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Back Button */}
-      <ServiceBackButton categoryId="uiux-design" />
-
       {/* Hero Section */}
       <ServiceHero
         title="UI/UX DESIGN MASTERY"
@@ -52,6 +48,8 @@ export default function UIUXDesignPage() {
         ctaSecondary="View Work"
         onPrimaryCTA={scrollToPricing}
         onSecondaryCTA={scrollToPortfolio}
+        showBackButton={true}
+        categoryId="uiux-design"
       />
 
       {/* Pricing Section */}

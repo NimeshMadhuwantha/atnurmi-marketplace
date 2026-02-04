@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import ServiceHero from '../../components/ServiceHero';
 import ServicePricingCard from '../../components/ServicePricingCard';
 import ServicePortfolioSection from '../../components/ServicePortfolioSection';
-import ServiceBackButton from '../../components/ServiceBackButton';
 import {
   servicePricing,
   servicePortfolio,
@@ -39,9 +38,6 @@ export default function GraphicDesignPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Back Button */}
-      <ServiceBackButton categoryId="graphic-design" />
-
       {/* Hero Section */}
       <ServiceHero
         title="GRAPHIC DESIGN EXCELLENCE"
@@ -52,6 +48,8 @@ export default function GraphicDesignPage() {
         ctaSecondary="See Portfolio"
         onPrimaryCTA={scrollToPricing}
         onSecondaryCTA={scrollToPortfolio}
+        showBackButton={true}
+        categoryId="graphic-design"
       />
 
       {/* Pricing Section */}

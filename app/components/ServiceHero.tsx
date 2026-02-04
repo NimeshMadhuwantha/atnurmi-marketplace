@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 interface ServiceHeroProps {
   title: string;
@@ -11,6 +12,8 @@ interface ServiceHeroProps {
   ctaSecondary?: string;
   onPrimaryCTA?: () => void;
   onSecondaryCTA?: () => void;
+  showBackButton?: boolean;
+  categoryId?: string;
 }
 
 export default function ServiceHero({
@@ -22,7 +25,19 @@ export default function ServiceHero({
   ctaSecondary = 'View Archive',
   onPrimaryCTA,
   onSecondaryCTA,
+  showBackButton = false,
+  categoryId,
 }: ServiceHeroProps) {
+  const router = useRouter();
+
+  const handleBackClick = () => {
+    if (categoryId) {
+      router.push(`/services?category=${categoryId}`);
+    } else {
+      router.push('/services');
+    }
+  };
+
   return (
     <section className="relative w-full h-[85vh] overflow-hidden">
       <div
@@ -31,6 +46,28 @@ export default function ServiceHero({
       ></div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
       <div className="relative h-full max-w-[1400px] mx-auto px-6 flex flex-col justify-center items-start text-white">
+        {showBackButton && (
+          <button
+            onClick={handleBackClick}
+            className="flex items-center gap-2 text-sm md:text-base font-semibold text-white/60 hover:text-white transition-colors mb-6 group"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Back to Categories
+          </button>
+        )}
         <span className="inline-block px-4 py-1 bg-primary text-[10px] font-black tracking-[0.2em] uppercase rounded mb-6">
           {subtitle}
         </span>
