@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "Atnurmi | Art, UI/UX & Web Design Studio",
@@ -27,7 +21,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${inter.variable} bg-background-light dark:bg-background-dark transition-colors duration-300`}>
+      <body className="bg-background-light dark:bg-background-dark transition-colors duration-300 font-sans">
         <Navbar />
         {children}
         <Footer />
