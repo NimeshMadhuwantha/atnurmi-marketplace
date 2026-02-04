@@ -26,11 +26,17 @@ const services = [
     description: 'Clean, responsive, and performance-optimized code for modern web apps.',
     image: '/images/images/webdev-cover.webp',
   },
+  {
+    icon: 'draw',
+    title: 'Graphic Art',
+    description: 'Creative digital artwork and illustrations that bring imagination to life.',
+    image: '/images/images/graphic-art.webp',
+  },
 ];
 
 const ServicesSection: React.FC = () => {
   return (
-    <section id="services" className="py-16 md:py-24 px-4 sm:px-6 lg:px-20 max-w-[1440px] mx-auto">
+    <section id="services" className="py-8 md:py-12 px-4 sm:px-6 lg:px-20 max-w-[1440px] mx-auto">
       <div className="mb-12 md:mb-16 text-center md:text-left">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4 dark:text-white">
           My Services

@@ -21,7 +21,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, ima
       />
       
       <div className="relative z-10 p-8 pt-32">
-        <div className="w-14 h-14 bg-primary/10 text-primary rounded-[16px] flex items-center justify-center mb-6">
+        <div className="w-14 h-14 bg-white text-primary rounded-[16px] flex items-center justify-center mb-3 border border-primary">
           <span className="material-symbols-outlined text-3xl">{icon}</span>
         </div>
         <h3 className="text-xl font-bold mb-4 dark:text-white">{title}</h3>

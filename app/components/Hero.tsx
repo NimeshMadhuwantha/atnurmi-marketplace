@@ -3,7 +3,7 @@ import homeBackground from '@/public/images/images/homebackground.webp';
 
 const Hero: React.FC = () => {
   return (
-    <section className="py-10">
+    <section className="pb-10">
       <div className="w-full">
         <div className="relative min-h-[600px] flex flex-col items-start justify-end p-8 md:p-16 overflow-hidden bg-cover bg-center shadow-2xl"
           style={{
