@@ -32,9 +32,9 @@ export default function ServiceHero({
 
   const handleBackClick = () => {
     if (categoryId) {
-      router.push(`/services?category=${categoryId}`);
+      router.push(`/services-page?category=${categoryId}`);
     } else {
-      router.push('/services');
+      router.push('/services-page');
     }
   };
 

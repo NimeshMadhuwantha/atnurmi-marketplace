@@ -28,7 +28,7 @@ export default function ServicesContent() {
 
   const handleCategoryClick = (categoryId: string) => {
     setActiveCategory(categoryId);
-    router.push(`/services/${categoryId}`);
+    router.push(`/services-page/${categoryId}`);
   };
 
   return (
