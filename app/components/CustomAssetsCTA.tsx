@@ -18,7 +18,7 @@ export default function CustomAssetsCTA() {
         </div>
         <Link
           href="/contact"
-          className="shrink-0 flex items-center justify-center gap-3 bg-primary text-white font-bold py-5 px-10 rounded-full shadow-xl shadow-primary/30 hover:shadow-none hover:translate-y-1 transition-all"
+          className="shrink-0 flex items-center justify-center gap-3 bg-primary text-white font-bold py-5 px-10 rounded-full shadow-lg shadow-primary/30 hover:shadow-md transition-shadow"
         >
           Contact Our Studio
           <svg

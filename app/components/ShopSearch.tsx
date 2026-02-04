@@ -16,7 +16,7 @@ export default function ShopSearch({ searchQuery, onSearchChange }: ShopSearchPr
           <span className="font-bold">for the Modern Creator</span>
         </h1>
         <label className="flex flex-col w-full">
-          <div className="flex w-full items-stretch rounded-xl h-14 bg-white dark:bg-white/5 border border-[#dae2e7] dark:border-white/10 shadow-sm overflow-hidden transition-all focus-within:ring-2 focus-within:ring-primary/20">
+          <div className="flex w-full items-stretch rounded-xl h-14 bg-white dark:bg-white/5 border border-[#dae2e7] dark:border-white/10 shadow-sm overflow-hidden">
             <div className="text-[#5e7d8d] flex items-center justify-center px-5">
               <svg
                 className="w-5 h-5"

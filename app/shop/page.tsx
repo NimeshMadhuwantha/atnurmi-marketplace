@@ -139,7 +139,7 @@ export default function ShopPage() {
             {/* Grid */}
             {paginatedProducts.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 md:gap-6">
                   {paginatedProducts.map((item) => (
                     <ShopItemCard key={item.id} item={item} onDownload={handleDownload} />
                   ))}

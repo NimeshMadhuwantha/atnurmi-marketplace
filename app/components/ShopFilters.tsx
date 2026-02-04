@@ -123,7 +123,7 @@ export default function ShopFilters({ onFilterChange }: ShopFiltersProps) {
 
         <button
           onClick={handleApplyFilters}
-          className="w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold transition-transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20"
+          className="w-full flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold transition-colors hover:bg-primary/90 shadow-md shadow-primary/20"
         >
           Apply Filters
         </button>

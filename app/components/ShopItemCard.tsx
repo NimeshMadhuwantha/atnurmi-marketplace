@@ -15,25 +15,25 @@ export default function ShopItemCard({ item, onDownload }: ShopItemCardProps) {
   const priceColor = item.price === 'free' ? 'text-green-600' : 'text-primary';
 
   return (
-    <div className="item-card group relative flex flex-col bg-white dark:bg-white/5 rounded-xl overflow-hidden border border-[#f0f3f5] dark:border-white/10 transition-all hover:shadow-2xl">
-      <div className="aspect-[4/5] relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+    <div className="item-card group relative flex flex-col bg-white dark:bg-white/5 rounded-xl overflow-hidden border border-[#f0f3f5] dark:border-white/10 transition-shadow hover:shadow-lg">
+      <div className="aspect-[3/4] relative overflow-hidden bg-gray-100 dark:bg-gray-800">
         {/* Premium Badge */}
         {item.isPremium && (
-          <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full p-2 shadow-lg">
+          <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full p-1.5 shadow-md">
             <svg
-              className="w-5 h-5 text-white"
+              className="w-3.5 h-3.5 text-white"
               fill="currentColor"
-              viewBox="0 0 20 20"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
             </svg>
           </div>
         )}
 
         {/* Package Badge */}
         {isPackage && (
-          <div className="absolute top-4 left-4 z-10 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+          <div className="absolute top-3 left-3 z-10 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-full">
             {(item as ShopPackage).itemCount}+ Items
           </div>
         )}
@@ -60,13 +60,13 @@ export default function ShopItemCard({ item, onDownload }: ShopItemCardProps) {
         </div>
 
         {/* Hover Overlay */}
-        <div className="hover-overlay absolute inset-0 bg-[#101618]/60 flex flex-col items-center justify-center gap-4 opacity-0 transition-opacity duration-300">
+        <div className="hover-overlay absolute inset-0 bg-[#101618]/60 flex flex-col items-center justify-center gap-3 opacity-0 transition-opacity duration-300">
           <button
             onClick={() => onDownload(item)}
-            className="bg-white text-[#101618] font-bold px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+            className="bg-white text-[#101618] font-bold px-5 py-2 rounded-full hover:bg-primary hover:text-white transition-colors flex items-center gap-2 text-sm"
           >
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -81,18 +81,18 @@ export default function ShopItemCard({ item, onDownload }: ShopItemCardProps) {
             </svg>
             Download
           </button>
-          <button className="bg-white/20 backdrop-blur-md text-white border border-white/30 font-bold px-6 py-3 rounded-full hover:bg-white/40 transition-colors">
+          <button className="bg-white/20 backdrop-blur-md text-white border border-white/30 font-bold px-5 py-2 rounded-full hover:bg-white/40 transition-colors text-sm">
             Preview
           </button>
         </div>
       </div>
 
-      <div className="p-5 flex justify-between items-start">
+      <div className="p-4 flex justify-between items-start">
         <div>
-          <h4 className="font-bold text-lg text-[#101618] dark:text-white">
+          <h4 className="font-bold text-base text-[#101618] dark:text-white">
             {item.title}
           </h4>
-          <p className="text-sm text-[#5e7d8d]">
+          <p className="text-xs text-[#5e7d8d]">
             {isPackage
               ? `${(item as ShopPackage).category.charAt(0).toUpperCase() + (item as ShopPackage).category.slice(1)} Package`
               : Array.isArray((item as ShopItem).category)
