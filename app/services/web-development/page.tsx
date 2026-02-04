@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import ServiceHero from '../../components/ServiceHero';
 import ServicePricingCard from '../../components/ServicePricingCard';
 import ServicePortfolioSection from '../../components/ServicePortfolioSection';
+import ServiceBackButton from '../../components/ServiceBackButton';
 import {
   servicePricing,
   servicePortfolio,
@@ -38,6 +39,9 @@ export default function WebDevelopmentPage() {
 
   return (
     <div className="min-h-screen">
+      {/* Back Button */}
+      <ServiceBackButton categoryId="web-development" />
+
       {/* Hero Section */}
       <ServiceHero
         title="WEB DEVELOPMENT"
