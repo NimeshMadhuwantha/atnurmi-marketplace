@@ -19,17 +19,17 @@ export default function CategoryPills({
   onCategoryChange,
 }: CategoryPillsProps) {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-3 pb-2">
+    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pb-2">
       {categories.map((category) => {
         const isActive = activeCategory === category.id;
         return (
           <button
             key={category.id}
             onClick={() => onCategoryChange(category.id)}
-            className={`flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full px-6 transition-colors ${
+            className={`flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full px-6 transition-colors border ${
               isActive
-                ? 'bg-primary text-white shadow-md shadow-primary/20'
-                : 'bg-white dark:bg-white/5 border border-[#dae2e7] dark:border-white/10 cursor-pointer'
+                ? 'bg-primary text-white shadow-md shadow-primary/20 border-primary'
+                : 'bg-white dark:bg-white/5 border-[#dae2e7] dark:border-white/10 cursor-pointer'
             }`}
           >
             <p

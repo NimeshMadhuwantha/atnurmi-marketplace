@@ -34,7 +34,7 @@ export default function ShopSearch({ searchQuery, onSearchChange }: ShopSearchPr
               </svg>
             </div>
             <input
-              className="flex w-full border-none bg-transparent focus:outline-0 focus:ring-0 text-[#101618] dark:text-white placeholder:text-[#5e7d8d] text-lg font-light leading-normal px-4"
+              className="flex w-full border-none bg-transparent outline-none focus:outline-none focus:ring-0 text-[#101618] dark:text-white placeholder:text-[#5e7d8d] text-lg font-light leading-normal px-4"
               placeholder="Search icons, UI kits, graphics..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
