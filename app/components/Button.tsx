@@ -6,6 +6,7 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
+  href?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ 
@@ -13,9 +14,10 @@ const Button: React.FC<ButtonProps> = ({
   variant = 'primary', 
   size = 'md',
   className = '',
-  onClick 
+  onClick,
+  href
 }) => {
-  const baseStyles = 'font-bold transition-all rounded-full';
+  const baseStyles = 'font-bold transition-all rounded-full inline-block text-center';
   
   const variants = {
     primary: 'bg-primary hover:bg-ocean text-white shadow-lg shadow-primary/20',
@@ -24,14 +26,24 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const sizes = {
-    sm: 'px-6 py-2.5 text-sm',
-    md: 'px-10 py-5 text-lg',
-    lg: 'px-12 py-5 text-lg',
+    sm: 'px-6 py-1.5 text-sm',
+    md: 'px-10 py-2.5 text-lg',
+    lg: 'px-12 py-3.5 text-lg',
   };
+
+  const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+
+  if (href) {
+    return (
+      <a href={href} className={classes}>
+        {children}
+      </a>
+    );
+  }
 
   return (
     <button 
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={classes}
       onClick={onClick}
     >
       {children}
