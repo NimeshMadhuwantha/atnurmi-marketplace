@@ -1,7 +1,8 @@
 import React from 'react';
+import { MdArrowForward } from 'react-icons/md';
 
 interface ServiceCardProps {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
   image: string;
@@ -22,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, ima
       
       <div className="relative z-10 p-8 pt-32">
         <div className="w-14 h-14 bg-white text-primary rounded-[16px] flex items-center justify-center mb-3 border border-primary">
-          <span className="material-symbols-outlined text-3xl">{icon}</span>
+          {icon}
         </div>
         <h3 className="text-xl font-bold mb-4 dark:text-white">{title}</h3>
         <p className="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
@@ -32,7 +33,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, ima
           className="inline-flex items-center gap-2 text-primary font-bold group-hover:gap-3 transition-all" 
           href={link}
         >
-          Explore <span className="material-symbols-outlined text-sm">arrow_forward</span>
+          Explore <MdArrowForward className="text-lg" />
         </a>
       </div>
     </div>
