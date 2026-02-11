@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Logo } from './Logo';
+import Image from 'next/image';
 import Button from './Button';
+import { MdMenu, MdClose } from 'react-icons/md';
+import logo from '@/public/images/images/logo.png';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,12 +17,12 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 w-full border-b border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <Logo className="size-8 text-primary" />
+        <a href="/home" className="flex items-center gap-3 cursor-pointer">
+          <Image src={logo} alt="Atnurmi Logo" width={32} height={32} className="object-contain" />
           <h1 className="text-xl font-black tracking-tighter uppercase dark:text-white">
             Atnurmi
           </h1>
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-10">
@@ -54,9 +56,7 @@ const Navbar: React.FC = () => {
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
-          <span className="material-symbols-outlined text-3xl">
-            {isMobileMenuOpen ? 'close' : 'menu'}
-          </span>
+          {isMobileMenuOpen ? <MdClose className="text-3xl" /> : <MdMenu className="text-3xl" />}
         </button>
       </div>
 

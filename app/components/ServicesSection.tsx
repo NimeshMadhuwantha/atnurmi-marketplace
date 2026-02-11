@@ -1,33 +1,35 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
+import { MdDesktopWindows, MdBrush, MdAutoAwesome, MdCode, MdDraw } from 'react-icons/md';
+import { ImDisplay } from 'react-icons/im';
 
 const services = [
   {
-    icon: 'desktop_windows',
+    icon: <ImDisplay size={24} />,
     title: 'UI/UX Design',
     description: 'Modern, user-centric interfaces designed to provide seamless digital navigation.',
     image: '/images/images/uiux-cover.webp',
   },
   {
-    icon: 'brush',
+    icon: <MdBrush size={24} />,
     title: 'Pencil Arts',
     description: 'Bespoke hand-drawn illustrations and digital paintings with artistic soul.',
     image: '/images/images/art-cover.webp',
   },
   {
-    icon: 'auto_awesome',
+    icon: <MdAutoAwesome size={24} />,
     title: 'Graphic Design',
     description: 'Visual identities and branding that make a lasting impression on your audience.',
     image: '/images/images/graphic-cover.webp',
   },
   {
-    icon: 'code',
+    icon: <MdCode size={24} />,
     title: 'Front-end Dev',
     description: 'Clean, responsive, and performance-optimized code for modern web apps.',
     image: '/images/images/webdev-cover.webp',
   },
   {
-    icon: 'draw',
+    icon: <MdDraw size={24} />,
     title: 'Graphic Art',
     description: 'Creative digital artwork and illustrations that bring imagination to life.',
     image: '/images/images/graphic-art.webp',
