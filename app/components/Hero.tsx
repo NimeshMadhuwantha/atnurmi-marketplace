@@ -12,12 +12,12 @@ const Hero: React.FC = () => {
             backgroundImage: `linear-gradient(to top, rgba(16, 28, 34, 0.9) 0%, rgba(19, 164, 236, 0.2) 100%), url(${homeBackground.src})`,
           }}
         >
-          <div className="max-w-[1440px] mx-auto px-6 lg:px-20 w-full">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-20 w-full -translate-y-12 md:translate-y-0">
             <div className="relative z-10 max-w-2xl">
             <span className="bg-primary/20 backdrop-blur-md text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-primary/30 mb-6 inline-block">
               Established 2025
             </span>
-            <h1 className="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tighter mb-6">
+            <h1 className="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tighter mb-6 pt-6 md:pt-0">
               Atnurmi - Art, Design &amp; Web Studio
             </h1>
             <p className="text-white/80 text-lg md:text-xl font-medium leading-relaxed mb-8 max-w-xl">

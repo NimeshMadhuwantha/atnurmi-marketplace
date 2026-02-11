@@ -81,12 +81,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20">
           {/* Brand Section */}
           <div className="col-span-1 text-center sm:text-left">
-            <div className="flex items-center gap-3 mb-6 justify-center sm:justify-start">
+            <a href="/home" className="flex items-center gap-3 mb-6 justify-center sm:justify-start cursor-pointer">
               <Image src={logo} alt="Atnurmi Logo" width={24} height={24} className="object-contain" />
               <h2 className="text-lg font-black tracking-tighter uppercase dark:text-white">
                 Atnurmi
               </h2>
-            </div>
+            </a>
             <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
               Premium creative studio specializing in editorial art, UI/UX, and high-end digital solutions.
             </p>
@@ -107,21 +107,21 @@ const Footer: React.FC = () => {
           <div className="text-center sm:text-left">
             <h6 className="font-bold mb-4 md:mb-6 dark:text-white">Services</h6>
             <ul className="space-y-3 md:space-y-4 text-sm text-gray-500 dark:text-gray-400">
-              <li><a className="hover:text-primary transition-colors" href="#">UI/UX Design</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Graphic Arts</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Web Development</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Branding</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/services-page/uiux-design">UI/UX Design</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/services-page/art-and-creation">Arts</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/services-page/web-development">Web Development</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/services-page/graphic-design">Graphic</a></li>
             </ul>
           </div>
 
           {/* Shop */}
-          <div className="text-center sm:text-left">
+          <div className="hidden sm:block text-center sm:text-left">
             <h6 className="font-bold mb-4 md:mb-6 dark:text-white">Shop</h6>
             <ul className="space-y-3 md:space-y-4 text-sm text-gray-500 dark:text-gray-400">
-              <li><a className="hover:text-primary transition-colors" href="#">Figma Kits</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Brush Packs</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Wallpapers</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Templates</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/shop">Wallpapers</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/shop">Icon Pack</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/shop">Graphic Art</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/shop">Characters</a></li>
             </ul>
           </div>
 
@@ -136,9 +136,10 @@ const Footer: React.FC = () => {
               <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
               
               <div className="flex gap-2 max-w-sm mx-auto sm:mx-0">
-                <textarea 
+                <input 
+                  type="text"
                   name="message"
-                  className="flex-1 bg-gray-50 dark:bg-gray-800 border-none rounded-[10px] text-sm px-4 py-3 focus:ring-2 focus:ring-primary dark:text-white resize-none min-h-[48px]" 
+                  className="flex-1 bg-gray-100 dark:bg-gray-800 border-none rounded-[10px] text-sm px-4 py-3 focus:ring-0 focus:outline-none dark:text-white h-[44px]" 
                   placeholder="Your message..." 
                   disabled={loading}
                   maxLength={1000}
