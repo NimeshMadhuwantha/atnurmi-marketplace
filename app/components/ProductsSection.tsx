@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from './ProductCard';
+import { MdShoppingBag } from 'react-icons/md';
 
 const products = [
   {
@@ -36,7 +37,7 @@ const ProductsSection: React.FC = () => {
           <div className="w-20 h-1.5 bg-primary rounded-full mx-auto md:mx-0" />
         </div>
         <a className="text-primary font-bold flex items-center gap-2 hover:underline" href="#">
-          View All Marketplace <span className="material-symbols-outlined">shopping_bag</span>
+          View All Marketplace <MdShoppingBag className="text-xl" />
         </a>
       </div>
 
